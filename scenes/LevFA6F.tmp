@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsvpp6coto42"]
+
+[ext_resource type="PackedScene" uid="uid://dgoucoul50c5q" path="res://scenes/TileSet.tscn" id="1_uoswg"]
+[ext_resource type="PackedScene" uid="uid://bbxl7y0d0378b" path="res://scenes/Player.tscn" id="2_fdtot"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Tileset" parent="." instance=ExtResource("1_uoswg")]
+position = Vector2(13.632, 498.856)
+
+[node name="Player" parent="." instance=ExtResource("2_fdtot")]
+position = Vector2(35, 577)

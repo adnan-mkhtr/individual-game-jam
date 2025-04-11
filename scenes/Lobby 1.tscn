@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwgh857rm0o1i"]
+
+[ext_resource type="Script" path="res://Scripts/Lobby 1.gd" id="1_8fb11"]
+[ext_resource type="Texture2D" uid="uid://cniw0d1qf3y0d" path="res://assets/Spritesheet/DarkForest/background/backgroungbe3.png" id="2_oq7oq"]
+[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_hir20"]
+
+[node name="Lobby1" type="Node2D"]
+script = ExtResource("1_8fb11")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(544, 328.5)
+scale = Vector2(3.4, 3.65)
+texture = ExtResource("2_oq7oq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 21.0
+offset_right = 703.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "Be Careful! Throughout the game,"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 71.6
+offset_right = 778.0
+offset_bottom = 131.6
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = " You'll be dealing with the undead."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 153.0
+offset_right = 1360.0
+offset_bottom = 213.0
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "You can attack by pressing 'z' key."
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 202.0
+offset_right = 787.0
+offset_bottom = 262.0
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "You are also attacked by the undead."
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 252.0
+offset_right = 1005.0
+offset_bottom = 312.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 50
+text = "if hit, you can restore your blood by pressing 'C' key."
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 52.0
+offset_top = 303.0
+offset_right = 1003.0
+offset_bottom = 363.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "You can do this every 20 seconds."
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 385.0
+offset_right = 793.0
+offset_bottom = 445.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "A portal to the next level will appear."
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 439.0
+offset_right = 1005.0
+offset_bottom = 499.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "when you've killed all of the enemies."
+
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 582.0
+offset_top = 522.0
+offset_right = 998.0
+offset_bottom = 582.0
+theme_override_colors/font_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_hir20")
+theme_override_font_sizes/font_size = 52
+text = "Continue to the Game"
+
+[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]

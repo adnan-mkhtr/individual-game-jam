@@ -1,0 +1,360 @@
+[gd_scene load_steps=31 format=3 uid="uid://b76en31wu0bdr"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_uoyon"]
+[ext_resource type="PackedScene" uid="uid://dvg8jfdyh2foo" path="res://scenes/Health.tscn" id="2_rimpy"]
+[ext_resource type="Texture2D" uid="uid://dyv7xcvyjn7n0" path="res://assets/Spritesheet/Player/Idle.png" id="3_v0wpb"]
+[ext_resource type="Texture2D" uid="uid://dsl6sjoq5eo7f" path="res://assets/Spritesheet/Player/Run.png" id="4_fp6on"]
+[ext_resource type="Texture2D" uid="uid://bh8se7uun4k24" path="res://assets/Spritesheet/Player/Attacks.png" id="5_338po"]
+[ext_resource type="Texture2D" uid="uid://ck10kd0qbsros" path="res://assets/Spritesheet/Player/Jump.png" id="6_tqh85"]
+[ext_resource type="Texture2D" uid="uid://dr01rjej0yl6r" path="res://assets/Spritesheet/Player/Health.png" id="7_c1iwy"]
+[ext_resource type="Texture2D" uid="uid://bjxehx8x018q6" path="res://assets/Spritesheet/Player/FullHeal.png" id="8_tjfne"]
+[ext_resource type="Texture2D" uid="uid://cdjwfw7qgqn8c" path="res://assets/Spritesheet/Player/Hurt.png" id="9_3vdce"]
+[ext_resource type="Texture2D" uid="uid://b5gu6ie2s5nai" path="res://assets/Spritesheet/Player/Death.png" id="10_i8cvm"]
+[ext_resource type="AudioStream" uid="uid://dty6yjj54esut" path="res://assets/SFX/mixkit-metal-hit-woosh-1485.ogg" id="11_vc6lr"]
+[ext_resource type="AudioStream" uid="uid://dc28kb7d4jsqb" path="res://assets/BGM/sci_fi_platformer04_main_loop.ogg" id="12_147my"]
+[ext_resource type="AudioStream" uid="uid://cs27ixlq2mmlw" path="res://assets/SFX/hurt.ogg" id="13_qwffb"]
+[ext_resource type="Texture2D" uid="uid://dnx0evkkc8dii" path="res://assets/Icons/Health potion.png" id="14_g7o73"]
+[ext_resource type="Script" path="res://Scripts/HealLabel.gd" id="15_pxaly"]
+[ext_resource type="Texture2D" uid="uid://dtgm4q5c1ybmp" path="res://assets/Icons/medkit.png" id="16_jkiwo"]
+[ext_resource type="Script" path="res://Scripts/FullHealLabel.gd" id="17_qtc6r"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "Attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "Death"
+length = 0.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Death:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="3"]
+resource_name = "Fall"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fall:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="4"]
+resource_name = "FullHeal"
+length = 4.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullHeal:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="5"]
+length = 2.4
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heal:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "Hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hurt:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="7"]
+length = 1.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="8"]
+length = 1.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jump:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="9"]
+resource_name = "Pray"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullHeal:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="10"]
+length = 1.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Run:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xny36"]
+_data = {
+"Attack": SubResource("1"),
+"Death": SubResource("2"),
+"Fall": SubResource("3"),
+"FullHeal": SubResource("4"),
+"Heal": SubResource("5"),
+"Hurt": SubResource("6"),
+"Idle": SubResource("7"),
+"Jump": SubResource("8"),
+"Pray": SubResource("9"),
+"Run": SubResource("10")
+}
+
+[sub_resource type="RectangleShape2D" id="11"]
+size = Vector2(12.122, 29.1884)
+
+[sub_resource type="RectangleShape2D" id="12"]
+size = Vector2(11.3269, 29.3776)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(-40.6872, 12.5542)
+collision_layer = 5
+script = ExtResource("1_uoyon")
+
+[node name="HealDuration" type="Timer" parent="."]
+one_shot = true
+
+[node name="HealCoolDown" type="Timer" parent="."]
+one_shot = true
+
+[node name="FullHealCoolDown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0.687199, -65.5542)
+zoom = Vector2(2.3, 2.3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xny36")
+}
+
+[node name="Health" parent="." instance=ExtResource("2_rimpy")]
+position = Vector2(-215.313, -191.554)
+scale = Vector2(0.5, 0.5)
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_v0wpb")
+hframes = 2
+vframes = 4
+
+[node name="Run" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_fp6on")
+hframes = 2
+vframes = 4
+
+[node name="Attack" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_338po")
+hframes = 8
+vframes = 5
+frame = 6
+
+[node name="Jump" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_tqh85")
+hframes = 2
+vframes = 4
+
+[node name="Fall" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_tqh85")
+hframes = 2
+vframes = 4
+
+[node name="Heal" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_c1iwy")
+hframes = 2
+vframes = 4
+
+[node name="FullHeal" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_tjfne")
+hframes = 20
+
+[node name="Hurt" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_3vdce")
+hframes = 2
+vframes = 2
+
+[node name="Death" type="Sprite2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_i8cvm")
+hframes = 2
+vframes = 2
+
+[node name="PlayerHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(0.808136, -14.5817)
+shape = SubResource("11")
+one_way_collision_margin = 0.0
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(0.178177, -19.2434)
+collision_layer = 2
+collision_mask = 2
+
+[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(14.2339, 4.6669)
+shape = SubResource("12")
+disabled = true
+
+[node name="AttackCollision2" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-14.2438, 4.95715)
+shape = SubResource("12")
+disabled = true
+
+[node name="AttackSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_vc6lr")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_147my")
+
+[node name="HurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_qwffb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -108.313
+offset_top = -192.554
+offset_right = -85.3128
+offset_bottom = -172.554
+texture = ExtResource("14_g7o73")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -2.0
+offset_right = 48.0
+offset_bottom = 21.0
+script = ExtResource("15_pxaly")
+
+[node name="Timer" type="Timer" parent="TextureRect/Label"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -34.3128
+offset_top = -195.554
+offset_right = -6.3128
+offset_bottom = -170.554
+texture = ExtResource("16_jkiwo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 1.0
+offset_right = 64.0
+offset_bottom = 24.0
+script = ExtResource("17_qtc6r")
+
+[node name="Timer" type="Timer" parent="TextureRect2/Label"]
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_AttackArea_body_entered"]

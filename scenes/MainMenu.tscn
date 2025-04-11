@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhkgsn4i4b6ec"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_gkfoc"]
+[ext_resource type="Texture2D" uid="uid://dgwo01hyt1gxp" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="2_irp3h"]
+[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_nqxro"]
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(505, 265)
+script = ExtResource("1_gkfoc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 42)
+scale = Vector2(3.23125, 3.42222)
+texture = ExtResource("2_irp3h")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -123.5
+offset_right = 440.0
+offset_bottom = -28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.290196, 0.172549, 0.164706, 1)
+theme_override_colors/font_outline_color = Color(0.290196, 0.172549, 0.164706, 1)
+theme_override_fonts/font = ExtResource("3_nqxro")
+theme_override_font_sizes/font_size = 84
+text = "Knight of the Withered Forest"
+
+[node name="StartButton" type="LinkButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -1.0
+offset_right = 90.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0.290196, 0.172549, 0.164706, 1)
+theme_override_fonts/font = ExtResource("3_nqxro")
+theme_override_font_sizes/font_size = 52
+text = "Start Game"
+
+[node name="QuitButton" type="LinkButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = 81.0
+offset_right = 111.5
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.823529, 0.411765, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0.290196, 0.172549, 0.164706, 1)
+theme_override_fonts/font = ExtResource("3_nqxro")
+theme_override_font_sizes/font_size = 52
+text = "Quit Game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://csj7ss4jhqine"]
+
+[ext_resource type="Script" path="res://Scripts/Lobby 2.gd" id="1_piif7"]
+[ext_resource type="Texture2D" uid="uid://cniw0d1qf3y0d" path="res://assets/Spritesheet/DarkForest/background/backgroungbe3.png" id="2_bupmj"]
+[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_fn74s"]
+
+[node name="Lobby2" type="Node2D"]
+script = ExtResource("1_piif7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(544, 328.5)
+scale = Vector2(3.4, 3.65)
+texture = ExtResource("2_bupmj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 21.0
+offset_right = 703.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "In this level, you will face 2 times more enemies"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 78.0
+offset_right = 571.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "You also get new abilities"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 168.0
+offset_right = 1360.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "This ability can instantly restore your health"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 239.0
+offset_right = 837.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "By pressing the 'v' key. While doing this,"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 308.0
+offset_right = 1005.0
+offset_bottom = 368.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 50
+text = "You'll be immune to enemy attacks."
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 379.0
+offset_right = 1004.0
+offset_bottom = 439.0
+pivot_offset = Vector2(555, -85)
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "You only can do this every 30 seconds."
+
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 582.0
+offset_top = 503.0
+offset_right = 998.0
+offset_bottom = 563.0
+theme_override_colors/font_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_fn74s")
+theme_override_font_sizes/font_size = 52
+text = "Continue to the Game"
+
+[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]

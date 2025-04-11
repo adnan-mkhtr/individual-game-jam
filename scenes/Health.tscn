@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvg8jfdyh2foo"]
+
+[ext_resource type="Texture2D" uid="uid://bcqve523v7rob" path="res://assets/Icons/heart.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/Health.gd" id="1_h4u1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1auwt"]
+bg_color = Color(0.592157, 0.321569, 0.321569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecmb0"]
+bg_color = Color(0.972549, 0.109804, 0.109804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+
+[node name="Health" type="Node2D"]
+script = ExtResource("1_h4u1o")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 208.0
+offset_bottom = 23.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1auwt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ecmb0")
+value = 50.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -9.857
+offset_top = 1.756
+offset_right = 25.143
+offset_bottom = 31.756
+texture = ExtResource("1")
+expand_mode = 1
+stretch_mode = 6
