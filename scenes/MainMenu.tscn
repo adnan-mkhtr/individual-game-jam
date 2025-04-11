@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhkgsn4i4b6ec"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_gkfoc"]
-[ext_resource type="Texture2D" uid="uid://dgwo01hyt1gxp" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="2_irp3h"]
-[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_nqxro"]
+[ext_resource type="Texture2D" uid="uid://dvtmd77ncofw6" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="2_irp3h"]
+[ext_resource type="FontFile" uid="uid://cwn05k4dxy20k" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_nqxro"]
 
 [node name="MainMenu" type="Node2D"]
 position = Vector2(505, 265)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwgh857rm0o1i"]
 
 [ext_resource type="Script" path="res://Scripts/Lobby 1.gd" id="1_8fb11"]
-[ext_resource type="Texture2D" uid="uid://cniw0d1qf3y0d" path="res://assets/Spritesheet/DarkForest/background/backgroungbe3.png" id="2_oq7oq"]
-[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_hir20"]
+[ext_resource type="Texture2D" uid="uid://dotgmmbmo3yef" path="res://assets/Spritesheet/DarkForest/background/backgroungbe3.png" id="2_oq7oq"]
+[ext_resource type="FontFile" uid="uid://cwn05k4dxy20k" path="res://assets/Fonts/Beyond Wonderland.ttf" id="3_hir20"]
 
 [node name="Lobby1" type="Node2D"]
 script = ExtResource("1_8fb11")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkmqmnhby0c8q"]
 
-[ext_resource type="Texture2D" uid="uid://dgwo01hyt1gxp" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="1_663bb"]
+[ext_resource type="Texture2D" uid="uid://dvtmd77ncofw6" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="1_663bb"]
 [ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_v7txu"]
-[ext_resource type="FontFile" uid="uid://ch2m05tl4qq0f" path="res://assets/Fonts/Beyond Wonderland.ttf" id="2_jgrlw"]
+[ext_resource type="FontFile" uid="uid://cwn05k4dxy20k" path="res://assets/Fonts/Beyond Wonderland.ttf" id="2_jgrlw"]
 
 [node name="WinScreen" type="Node2D"]
 script = ExtResource("1_v7txu")

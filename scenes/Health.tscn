@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvg8jfdyh2foo"]
 
-[ext_resource type="Texture2D" uid="uid://bcqve523v7rob" path="res://assets/Icons/heart.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2h4tpt31sqbr" path="res://assets/Icons/heart.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="1_h4u1o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1auwt"]

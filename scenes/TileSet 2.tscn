@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=4 uid="uid://dk5isr1v8lji4"]
 
-[ext_resource type="Texture2D" uid="uid://dgwo01hyt1gxp" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="1_aw7t0"]
+[ext_resource type="Texture2D" uid="uid://dvtmd77ncofw6" path="res://assets/Spritesheet/DarkForest/background/backgroungfull.png" id="1_aw7t0"]
 [ext_resource type="Texture2D" uid="uid://b417lcm0kjowx" path="res://assets/Spritesheet/DarkForest/decorations/grass.png" id="2_7qp1y"]
 [ext_resource type="Texture2D" uid="uid://dldmg38uxyklo" path="res://assets/Spritesheet/DarkForest/decorations/stones.png" id="3_pibjh"]
 [ext_resource type="Texture2D" uid="uid://bk3sv0iauhr6q" path="res://assets/Spritesheet/oak_woods_v1.0/decorations/lamp.png" id="4_0xyaa"]
 [ext_resource type="Texture2D" uid="uid://cqba1dqtk4pw0" path="res://assets/Spritesheet/oak_woods_v1.0/decorations/fence_1.png" id="5_kpikp"]
-[ext_resource type="Texture2D" uid="uid://cg1oxc87gkuf" path="res://assets/Spritesheet/DarkForest/tileset.png" id="6_vb4on"]
+[ext_resource type="Texture2D" uid="uid://d3bwrwmjba6vq" path="res://assets/Spritesheet/DarkForest/tileset.png" id="6_vb4on"]
 [ext_resource type="Texture2D" uid="uid://cqg4n5ko43tnt" path="res://assets/Spritesheet/Tree/tree_dead.png" id="7_6l4ga"]
 [ext_resource type="Texture2D" uid="uid://bk5dultl1cmls" path="res://assets/Spritesheet/Tree/tree.png" id="8_6eqtb"]
 

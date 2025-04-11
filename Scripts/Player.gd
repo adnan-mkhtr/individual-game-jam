@@ -214,7 +214,7 @@ func hit():
 	if not is_dead and not is_hurt and not is_full_healing:
 		is_hurt = true
 		if Global.is_level2 == true:
-			health.current_value -= 5
+			health.current_value -= 4
 		else:
 			health.current_value -= 3
 		change_sprite($Hurt)

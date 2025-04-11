@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtpswpxue0m3i" path="res://assets/Spritesheet/Enemy/Walk.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bymplsnltx4ad" path="res://assets/Spritesheet/Enemy/Attacks.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://d4jk7jkh6pnes" path="res://assets/Spritesheet/Enemy/HurtDeath.png" id="4"]
-[ext_resource type="AudioStream" uid="uid://dty6yjj54esut" path="res://assets/SFX/mixkit-metal-hit-woosh-1485.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://ormrrbdcmghj" path="res://assets/SFX/mixkit-metal-hit-woosh-1485.ogg" id="5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(7.25978, 29.8068)

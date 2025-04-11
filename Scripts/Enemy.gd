@@ -43,10 +43,7 @@ func hurt() -> void:
 		is_dead = true
 		change_sprite($Death)
 		$AnimationPlayer.play("Death")
-		get_child(0).queue_free()
-		get_child(1).queue_free()
-		get_child(2).queue_free()
-
+		
 func hit() -> void:
 	$AttackDetector.monitoring = true
 	if not $AttackSFX.playing:

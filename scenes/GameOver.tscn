@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_4bju2"]
 [ext_resource type="Texture2D" uid="uid://drahabi3ehtwl" path="res://assets/Spritesheet/oak_woods_v1.0/background/background_layer_3.png" id="2_rvkqa"]
-[ext_resource type="FontFile" uid="uid://sieeouipfylp" path="res://assets/Fonts/Carnevalee Freakshow.ttf" id="3_yipjh"]
+[ext_resource type="FontFile" uid="uid://4jgtxhmgu6q2" path="res://assets/Fonts/Carnevalee Freakshow.ttf" id="3_yipjh"]
 
 [sub_resource type="FontFile" id="FontFile_od47s"]
 fallbacks = Array[Font]([ExtResource("3_yipjh")])
@@ -150,7 +150,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.160784, 0.180392, 1)
-theme_override_fonts/font = SubResource("FontFile_od47s")
+theme_override_fonts/font = ExtResource("3_yipjh")
 theme_override_font_sizes/font_size = 92
 text = "Game Over"
 
