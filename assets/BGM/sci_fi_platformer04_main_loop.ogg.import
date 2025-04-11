@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://dc28kb7d4jsqb"
+uid="uid://hj733d87wcib"
 path="res://.godot/imported/sci_fi_platformer04_main_loop.ogg-5aaced34e7631dd28965f8c06228a966.oggvorbisstr"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/sci_fi_platformer04_main_loop.ogg-5aaced34e76
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0
