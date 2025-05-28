@@ -109,7 +109,7 @@ _data = {
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_qbilx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(-0.0704994, -14.4175)
 shape = SubResource("1")
 
@@ -143,19 +143,20 @@ position = Vector2(9.82705, -24.3363)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2")
 hframes = 6
+frame = 2
 
 [node name="Idle" type="Sprite2D" parent="."]
 position = Vector2(9.827, -24.336)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1")
 hframes = 4
+frame = 3
 
 [node name="Attack" type="Sprite2D" parent="."]
 position = Vector2(9.82705, -24.3363)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3")
 hframes = 8
-frame = 7
 
 [node name="Death" type="Sprite2D" parent="."]
 position = Vector2(9.827, -24.336)
@@ -171,5 +172,8 @@ collision_mask = 2
 [node name="AttackSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5")
 
+[node name="StunnedTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]
 [connection signal="body_entered" from="AttackDetector" to="." method="_on_AttackDetector_body_entered"]
+[connection signal="timeout" from="StunnedTimer" to="." method="_on_StunnedTimer_timeout"]

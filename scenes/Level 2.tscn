@@ -869,6 +869,7 @@ radius = 26.0
 size = Vector2(1982, 60)
 
 [node name="Level 2" type="Node2D"]
+position = Vector2(6, 0)
 script = ExtResource("1_qk3y5")
 
 [node name="Tileset 2" parent="." instance=ExtResource("1_18t2q")]

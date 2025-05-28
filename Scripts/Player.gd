@@ -31,8 +31,12 @@ var is_full_heal_cooldown_active = false
 func _ready():
 	change_sprite($Idle)
 	$AnimationPlayer.play("Idle")
-	$BGM.play()
+	setup_bgm()
 	initialize_health()
+
+func setup_bgm():
+	$BGM.stream.loop = true
+	$BGM.play()
 
 func initialize_health():
 	var player_health = $Health
@@ -223,7 +227,7 @@ func hit():
 func _on_AttackArea_body_entered(body):
 	if "Enemy" in body.get_name():
 		body.hurt()
-
+		
 func change_sprite(exception: Node) -> void:
 	for child in get_children():
 		if child is Sprite2D and child != exception:
